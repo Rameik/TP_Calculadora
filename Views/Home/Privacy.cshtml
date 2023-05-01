@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Calculadora";
+}
+<div class="text-center">
+    <h1> Calculadora </h1>
+    <form asp-controller="Calculadora" asp-action="Calculo" method = "post">
+    <div>
+        <p><b>Elegir el tipo de operacion: </b></p>
+        <select name="operacion" id="TipoOperacion">
+            <option value = "Multiplicacion"> Multiplicacion </option>
+            <option value = "Division">Division</option>
+            <option value = "Suma">Suma</option>
+            <option value = "Resta">Resta</option>
+        </select>
+    </div>
+    <div>
+        <p><b>Numero 1</b></p>
+        <input type="number" name = "numero1"><br>
+    </div>
+    <div>
+        <p><b>Numero 2</b></p>
+        <input type="number" name = "numero2"><br>
+    </div>
+    <p><input type = "submit" value = "Calcular"></p>
+    </form>
+</div>
+
+@if (ViewBag.Resultado != 0)
+{
+    <div>
+        <h2>@ViewBag.Resultado</h2>
+    </div>
+}
+

@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Resultado";
+}
+<div class="text-center">
+    <h1> El resultado es:  </h1>
+       <h1>@ViewBag.resultado</h1>
+    <form asp-controller="Calculadora" asp-action="Index" method = "post">
+    <p><input type = "submit" value = "Volver"></p>
+    </form>
+</div>
